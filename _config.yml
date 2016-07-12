@@ -1,29 +1,37 @@
-title: 成长的鱼
-description: 记录成长 体会变化
-url: https://github.com/liujun028/liujun028.GitHub.io/
-avatar: # path/to/avatar for index page. e.g. /assets/img/avatar.jpg
-favicon: # path/to/favicon for site. e.g. /assets/img/favicon.ico
-google_analytics: # google analytics id
-disqus_shortname: # liujun
+# Site settings
+title:            "Stardust" # 添加博客标题
+author:           Yourname # 添加你的名字
+logo:             logo.png # 添加博客 Logo
+avatar:           avatar.png # 添加你的头像
+favicon:          favicon.ico # 添加用于显示于浏览器 Tab 上的博客图标
+email:            your-email@domain.com
+description: >    # 主题简介，可改为博客描述
+  Roon was an excellent service, with a beautiful understated design. After
+  being acquired by <a href='https://ghost.org'>Ghost</a>, the Roon theme was
+  open sourced.<br> This is my Jekyll port of the Roon theme.
 
-# Content for about page.
-# Each paragraph will be a <p> tag which is inserted to about
-# page. text_align is used to align the text. Default is left.
-# Other two values are center and right. If there are some links
-# in your paragraph, use '?link?' to take the place of a link.
-# And then write the real link under links. name is the link
-# text. url is the link. when external is set as true, then
-# a new whidow will be open when link is clicked.
-#
-about:
-  - paragraph: 
-    text_align: center
-    links:
-      - name: 成长的鱼
-        url: https://github.com/liujun028/liujun028.GitHub.io/
-        external: true
-      - name: 自由自在的鱼
-        url: https://github.com/liujun028/liujun028.GitHub.io/
-        external: false
+url:              "/" # 添加域名（不需要 http:// 前缀），或使用「/」作为博客根链接，
+baseurl:          "" # the subpath of your site, e.g. /blog/
 
-    
+twitter:          # 添加你的 Twitter 用户名
+github:           jekyll # 添加你的 GitHub 用户名
+disqus:           # 添加你的 Disqus 评论工具站点名
+
+permalink:        pretty
+paginate:         5
+
+# Build settings
+markdown:         kramdown
+highlighter:      rouge
+
+kramdown:
+  input:          GFM
+  auto_ids:       true
+  footnote_nr:    1
+  entity_output:  as_char
+  toc_levels:     1..6
+  enable_coderay: false
+
+gems:
+  - jekyll-sitemap
+  - jekyll-paginate

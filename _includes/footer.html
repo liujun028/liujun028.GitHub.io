@@ -1,7 +1,30 @@
-<div class="footer">
-  <span>&copy;</span>
-  <span><script type="text/javascript">document.write(new Date().getFullYear());</script></span>
-  <a class="link-1" href="/">{{ site.title }}</a>
-  <br />
-  <span>Powered by <a class="link-1" href="http://jekyllrb.com/">Jekyll</a> with <a class="link-1" href="https://github.com/kkninjae/book">Book</a> theme.</span>
-</div>
+<footer role="contentinfo" class='post-footer'>
+    <div class="inner">
+        <div class="vcard">
+          <a href="{{ site.baseurl }}/feed.xml" id="btn_feed" class="btn" title="Feed" target="_blank">
+                <span aria-hidden="true" data-icon=")"></span>
+                <strong>Feed</strong>
+            </a>
+
+            {% if site.logo %}
+            <a href="{{ site.baseurl }}/About" class="photo circle">
+              <span style="background-image: url('{{ site.baseurl }}/images/{{ site.avatar }}');">
+                <img src="{{ site.baseurl }}/images/{{ site.avatar }}" alt="{{ site.title }}"/>
+              </span>
+            </a>
+            {% endif %}
+
+            <div class="details">
+                <h4><a href="{{ site.url }}/About" class="url n">{{ site.author }}</a></h4>
+                <a href="{{ site.baseurl | prepend: site.url }}" class="js-remove-domain-schema">{{ site.url }}{{ site.baseurl }}</a><br>
+                <span><a href='https://github.com/{{ site.github }}'>My GitHub</a></span><br>
+                <span>Published with <a href="https://jekyllrb.com">Jekyll</a></span>
+            </div>
+        </div>
+        <div id="user_bio">
+            <div class="inner">
+                {{ site.description }}
+            </div>
+        </div>
+    </div>
+</footer>
